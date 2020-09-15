@@ -27,11 +27,11 @@ function setup() {
 	bob4 = new Bob (190,220,15,15);
 	bob5 = new Bob (220,220,15,15);
 	ground = new Ground (160,100,150,10);
-  rope=new Chain(bob1.body,ground.body,2,0);
-  rope2=new Chain(bob2.body,ground.body,2,0);
-  rope3=new Chain(bob3.body,ground.body,2,0);
-  rope4=new Chain(bob4.body,ground.body,2,0);
-  rope5=new Chain(bob5.body,ground.body,2,0);
+  rope=new Chain(bob1.body,ground.body,-65,0);
+  rope2=new Chain(bob2.body,ground.body,-35,0);
+  rope3=new Chain(bob3.body,ground.body,0,0);
+  rope4=new Chain(bob4.body,ground.body,35,0);
+  rope5=new Chain(bob5.body,ground.body,65,0);
 
 
 	Engine.run(engine);
@@ -56,11 +56,15 @@ function draw() {
 
    ground.display();
     
-    
-  
-  
- 
+
 }
 
-
+if (keycode===32){
+    bob1.force=1;
+    bob2.force=1;
+    bob3.force=1;
+    bob4.force=1;
+    bob5.force=1;
+   
+}
 
